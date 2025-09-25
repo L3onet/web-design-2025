@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <h1>Contacto</h1>
+    <form action="procesar.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40"></textarea>
+        <br><br>
+        <label for="genero">Genero:</label>
+        <label><input type="radio" name="genero" value="M">Masculino</label>
+        <label><input type="radio" name="genero" value="F">Femenino</label>
+        <label><input type="radio" name="genero" value="O">Otro</label>
+        <br><br>
+        <label for="intereses">Intereses:</label>
+        <label><input type="checkbox" name="intereses[]" value="deportes">Deportes</label>
+        <label><input type="checkbox" name="intereses[]" value="musica">Música</label>
+        <label><input type="checkbox" name="intereses[]" value="poesia">Poesía</label>
+        <label><input type="checkbox" name="intereses[]" value="natacion">Natacion</label>
+        <label><input type="checkbox" name="intereses[]" value="videojuegos">Videojuegos</label>
+        <br><br>
+        <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+                <option value="colombia">Colombia</option>
+                <option value="mexico">México</option>
+                <option value="peru">Perú</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="venezuela">Venezuela</option>
+            </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+        
+    </form>
+</body>
+</html>

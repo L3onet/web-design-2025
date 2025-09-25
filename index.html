@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina HTML</title>
+</head>
+<body>
+    <header id="inicio">
+        <figure>
+            <img src="img/gobierno_mexico.png" 
+            alt="Logo de Gobierno de México" 
+            width="238" 
+            height="67" />
+        </figure>
+        <figure>
+            <img src="img/tecnm.jpg" 
+            alt="Logo del Tecnológico Nacional de México" 
+            width="209" 
+            height="96" />
+        </figure>
+        <nav>
+            <ul>
+                <li>Inicio</li>
+                <li>Articulos</li>
+                <li>Categorias</li>
+                <li>Contacto</li>
+                <li>Acerca de</li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <article>
+            <header>
+                <h1>Ensayo de diseño web</h1>
+                <h2>HTML</h2>
+            </header>
+            <section>
+                <figure>
+                    <img  
+                    srcset="img/disney-logo-720.png 720w,
+                    img/disney-logo-1000.jpg 1000w"
+                    sizes="(max-width: 720px) 600px, 
+                           1048px"
+                    src="img/disney-logo-1000.jpg"
+                    alt="Logo de Disney"
+                    loading="lazy" />
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/homer-simpson-the-simpsons.gif" 
+                    alt="Homer Simpson Escondiendose de Lisa" 
+                    width="320" 
+                    height="232" />
+                </figure>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/28267842_7.svg" 
+                    alt="Logo" 
+                    width="1080" 
+                    height="768" />
+                </figure>
+            </section>
+            <section>
+                <p><strong>HTML</strong> es un lenguaje de marcas. Las marcas van entre <span class="destacado">corchetes angulares</span>.</p>
+                <div id="listas">
+                    <p>Los lenguajes de programación de lado servidor son:</p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>ASP</li>
+                        <li>JSP</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <p>El top de lenguajes de programación de la web es:</p>
+                    <ol>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ol>
+                    <p>Listas de definición</p>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>Es un lenguaje de marcado de hipertexto</dd>
+                    </dl>
+                </div>
+            </section>
+            <section>
+                <table border="1">
+                    <caption>Tabla de ejemplo</caption>
+                    <thead>
+                        <tr>
+                            <th width="10%">Numero</th>
+                            <th width="30%">Nombre</th>
+                            <th width="30%">Apellido Paterno</th>
+                            <th width="30%">Apellido Materno</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>Elemento 1</td>
+                            <td>Elemento 2</td>
+                            <td>Elemento 3</td>
+                            <td>Elemento 4</td>
+                        </tr>
+                        <tr>
+                            <td>Elemento 5</td>
+                            <td>Elemento 6</td>
+                            <td colspan="2">Elemento 7</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <p><a href="#inicio">Arriba</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 <a href="https://www.leonet.io/" target="_blank" rel="noopener noreferrer">González Vidales Leonel</a></p>
+        <p><a href="mailto:leonel.gv@cdaltamirano.tecnm.mx/">Mi correo</a></p>
+        <p><a href="tel:+527671085853">Mi celular</a></p>
+        <p>
+            <!-- Instagram -->
+            <a href="https://instagram.com/l3onet" target="_blank" aria-label="Instagram" title="Ir a Instagram de @leonel.gv">
+                <svg width="28" height="28">
+                    <use xlink:href="img/sprite.svg#instagram" />
+                </svg>
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
