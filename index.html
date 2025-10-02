@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera pagina HTML</title>
+    <link rel="stylesheet" href="css/hoja.css">
 </head>
 <body>
     <header id="inicio">
@@ -122,6 +123,30 @@
         </article>
         <p><a href="#inicio">Arriba</a></p>
     </main>
+    <section>
+        <iframe src="contacto.html" width="400" height="450" title="Contacto" frameborder="0"></iframe>
+    </section>
+    <section>
+        <object data="instrumentacion.pdf" type="application/pdf" width="800" height="400">
+            <p>Tu navegador no soporta PDF. <a href="instrumentacion.pdf">Descargar aquí</a></p>            
+        </object>
+    </section>
+    <section>
+        <video controls width="800" height="600" poster="img/disney-logo-720.png">
+            <source src="castillo.mp4" type="video/mp4">
+            Tu navegador no soporta video
+        </video>
+    </section>
+    <section>
+        <audio controls>
+            <source src="around.mp3" type="audio/mp3">
+            Tu navegador no soporta audio
+        </audio>
+    </section>
+    <section>
+        <canvas id="miCanvas" width="600" height="300" style="border:1px solid #000;">
+        </canvas>
+    </section>
     <footer>
         <p>&copy; 2025 <a href="https://www.leonet.io/" target="_blank" rel="noopener noreferrer">González Vidales Leonel</a></p>
         <p><a href="mailto:leonel.gv@cdaltamirano.tecnm.mx/">Mi correo</a></p>
@@ -135,5 +160,11 @@
             </a>
         </p>
     </footer>
+    <script>
+        const c = document.getElementById("miCanvas");
+        const ctx = c.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 75);
+    </script>
 </body>
 </html>
