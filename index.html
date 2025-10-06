@@ -7,62 +7,82 @@
     <link rel="stylesheet" href="css/hoja.css">
 </head>
 <body>
-    <header id="inicio">
-        <figure>
-            <img src="img/gobierno_mexico.png" 
-            alt="Logo de Gobierno de México" 
-            width="238" 
-            height="67" />
-        </figure>
-        <figure>
-            <img src="img/tecnm.jpg" 
-            alt="Logo del Tecnológico Nacional de México" 
-            width="209" 
-            height="96" />
-        </figure>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Articulos</li>
-                <li>Categorias</li>
-                <li>Contacto</li>
-                <li>Acerca de</li>
-            </ul>
-        </nav>
-    </header>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <header id="inicio">
+                <figure>
+                    <img src="img/gobierno_mexico.png" 
+                    alt="Logo de Gobierno de México" 
+                    width="238" 
+                    height="67" />
+                </figure>
+                <figure>
+                    <img src="img/tecnm.jpg" 
+                    alt="Logo del Tecnológico Nacional de México" 
+                    width="209" 
+                    height="96" />
+                </figure>
+        
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <nav class="navegacion">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Articulos</li>
+                    <li>Categorias</li>
+                    <li>Contacto</li>
+                    <li>Acerca de</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
     <main id="contenido">
         <article>
             <header>
                 <h1>Ensayo de diseño web</h1>
                 <h2>HTML</h2>
             </header>
-            <section>
-                <figure>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <figure>
                     <img  
                     srcset="img/disney-logo-720.png 720w,
                     img/disney-logo-1000.jpg 1000w"
-                    sizes="(max-width: 720px) 600px, 
-                           1048px"
+                    sizes="(max-width: 720px) 600px, 1048px"
                     src="img/disney-logo-1000.jpg"
                     alt="Logo de Disney"
                     loading="lazy" />
                 </figure>
-            </section>
-            <section>
-                <figure>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <figure>
                     <img src="img/homer-simpson-the-simpsons.gif" 
                     alt="Homer Simpson Escondiendose de Lisa" 
                     width="320" 
                     height="232" />
                 </figure>
-            </section>
-            <section>
-                <figure>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <figure>
                     <img src="img/28267842_7.svg" 
                     alt="Logo" 
                     width="1080" 
                     height="768" />
                 </figure>
+                </div>
+            </div>
+            <section>
+                
+            </section>
+            <section>
+                
+            </section>
+            <section>
+                
             </section>
             <section>
                 <p><strong>HTML</strong> es un lenguaje de marcas. Las marcas van entre <span class="destacado">corchetes angulares</span>.</p>
