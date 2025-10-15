@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos base para columnas */
@@ -87,4 +89,32 @@ img {
         max-width: 1170px;
         margin: 0 auto;
     }
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color:#777;
 }
