@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Productos Premium</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+    <!-- Barra de navegación fija -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🛒 TechStore</div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#" class="nav-link">Contacto</a>
+            </div>
+            <div class="cart-icon">
+                🛒
+                <span class="cart-badge">3</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Tecnología Premium a tu Alcance</h1>
+        <p>Descubre los productos más innovadores con las mejores ofertas del mercado. Calidad garantizada y envío gratis en todas tus compras.</p>
+        <button class="hero-button" onclick="document.getElementById('modal').classList.add('active')">
+            Ver Ofertas Especiales
+        </button>
+    </section>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Características -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3 class="feature-title">Envío Gratis</h3>
+                <p class="feature-description">En todos los pedidos sin mínimo de compra. Recibe tus productos en 24-48 horas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Pago Seguro</h3>
+                <p class="feature-description">Protegemos tus datos con la mejor tecnología de encriptación disponible.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3 class="feature-title">Garantía Total</h3>
+                <p class="feature-description">2 años de garantía en todos nuestros productos. Tu satisfacción es nuestra prioridad.</p>
+            </div>
+        </section>
+
+        <!-- Productos -->
+        <h2 class="section-title" id="productos">Productos Destacados</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <span class="product-badge">-30%</span>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Auriculares" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Auriculares Pro X</h3>
+                    <p class="product-description">Sonido envolvente premium con cancelación de ruido activa y 30 horas de batería.</p>
+                    <div class="product-price">$149.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-badge nuevo">Nuevo</span>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" alt="Reloj" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">SmartWatch Elite</h3>
+                    <p class="product-description">Monitorea tu salud 24/7 con GPS integrado y resistencia al agua de 50 metros.</p>
+                    <div class="product-price">$299.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-badge">-20%</span>
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop" alt="Gafas" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Gafas de Sol UV400</h3>
+                    <p class="product-description">Diseño elegante con protección total contra rayos UV. Polarizadas y duraderas.</p>
+                    <div class="product-price">$79.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-badge nuevo">Nuevo</span>
+                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop" alt="Laptop" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Laptop UltraBook Pro</h3>
+                    <p class="product-description">Procesador de última generación, 16GB RAM, pantalla 4K y diseño ultradelgado.</p>
+                    <div class="product-price">$1,299.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-badge">-15%</span>
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop" alt="Cámara" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Cámara Mirrorless 4K</h3>
+                    <p class="product-description">Captura momentos increíbles con 24MP, video 4K y estabilización de imagen.</p>
+                    <div class="product-price">$899.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="product-badge">-25%</span>
+                <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400&h=300&fit=crop" alt="Tablet" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Tablet Pro 12"</h3>
+                    <p class="product-description">Pantalla OLED, procesador A15, ideal para trabajo y entretenimiento en cualquier lugar.</p>
+                    <div class="product-price">$599.99</div>
+                    <button class="product-button">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección About con imagen flotante -->
+        <section class="about-section" id="about">
+            <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&h=300&fit=crop" alt="Sobre nosotros" class="about-image">
+            <h2 class="about-title">¿Por qué elegir TechStore?</h2>
+            <p class="about-text">
+                En TechStore nos especializamos en ofrecer productos tecnológicos de la más alta calidad a precios competitivos. Con más de 10 años de experiencia en el mercado, hemos construido una reputación basada en la confianza, la innovación y el servicio al cliente excepcional.
+            </p>
+            <p class="about-text">
+                Nuestro equipo de expertos selecciona cuidadosamente cada producto para garantizar que cumple con nuestros estrictos estándares de calidad. Trabajamos directamente con los fabricantes líderes para ofrecerte los últimos lanzamientos y las mejores ofertas del mercado.
+            </p>
+            <p class="about-text">
+                La satisfacción de nuestros clientes es nuestra prioridad número uno. Por eso ofrecemos garantía extendida, devoluciones gratuitas y un servicio de atención al cliente disponible 24/7. Únete a los miles de clientes satisfechos que ya han descubierto la diferencia de comprar en TechStore.
+            </p>
+        </section>
+
+        <!-- Testimonios -->
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="testimonial-text">"Excelente servicio y productos de calidad. Los auriculares que compré superaron mis expectativas. El envío fue rápido y el empaque impecable."</p>
+                <p class="testimonial-author">- María González ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"La mejor tienda online de tecnología. Precios competitivos y atención al cliente de primera. Ya he realizado tres compras y todas perfectas."</p>
+                <p class="testimonial-author">- Carlos Rodríguez ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Compré mi laptop aquí y estoy encantada. El proceso de compra fue sencillo y recibí mi pedido en menos de 48 horas. Totalmente recomendado."</p>
+                <p class="testimonial-author">- Ana Martínez ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h3>📧 Suscríbete a nuestro Newsletter</h3>
+            <p>Recibe ofertas exclusivas, novedades y descuentos especiales directamente en tu correo</p>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" class="newsletter-input" placeholder="tu@email.com" required>
+                <button type="submit" class="newsletter-button">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Prensa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ayuda</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Garantías</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Política de devolución</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechStore. Todos los derechos reservados. | Ejemplo educativo del Modelo de Caja CSS</p>
+        </div>
+    </footer>
+
+    <!-- Botón scroll to top -->
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">
+        ↑
+    </button>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <button class="modal-close" onclick="document.getElementById('modal').classList.remove('active')">&times;</button>
+            <h2>🎉 ¡Oferta Especial!</h2>
+            <p>Obtén un <strong>20% de descuento adicional</strong> en tu primera compra usando el código: <strong>WELCOME20</strong></p>
+            <p>Esta oferta es válida solo para nuevos clientes y se aplica a todos los productos de nuestra tienda.</p>
+            <button class="hero-button" onclick="document.getElementById('modal').classList.remove('active')">
+                ¡Entendido!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Cerrar modal al hacer clic fuera de él
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+
+        // Mostrar/ocultar botón de scroll según la posición
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.style.display = 'block';
+            } else {
+                scrollTop.style.display = 'none';
+            }
+        });
+
+        // Animación de los botones de añadir al carrito
+        document.querySelectorAll('.product-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = '✓ Añadido';
+                this.style.background = '#2ecc71';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.background = '#007bff';
+                }, 2000);
+            });
+        });
+
+        // Validación del formulario de newsletter
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = this.querySelector('.newsletter-input');
+            const button = this.querySelector('.newsletter-button');
+            
+            const originalText = button.textContent;
+            button.textContent = '✓ ¡Suscrito!';
+            button.style.background = '#2ecc71';
+            input.value = '';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

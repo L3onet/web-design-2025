@@ -4,6 +4,19 @@
     padding: 0;
 }
 
+header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
+
+.header-container img {
+    height: 80px;
+    width: auto;
+}
+
 /* Estilos base para columnas */
 [class*="col-"] {
     float: left;
@@ -37,6 +50,7 @@ img {
 .col-xs-10 {width: 83.33%;}
 .col-xs-11 {width: 91.66%;}
 .col-xs-12 {width: 100%;}
+
 
 /* TABLET: a partir de 600px */
 @media only screen and (min-width: 600px) {
@@ -94,6 +108,7 @@ img {
 nav {
     background-color: #333;
     padding: 1rem 2rem;
+    border-radius: 20px;
 }
 
 .nav-container{

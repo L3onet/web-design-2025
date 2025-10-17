@@ -1,0 +1,729 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN BASE
+   ======================================== */
+
+/* 3.4 - Consideración del interior de la caja
+   Aplicamos box-sizing: border-box globalmente para que
+   el padding y border se incluyan en el ancho/alto total */
+* {
+    margin: 0;              /* Elimina márgenes por defecto del navegador */
+    padding: 0;             /* Elimina padding por defecto del navegador */
+    box-sizing: border-box; /* Modelo de caja intuitivo */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;       /* Altura de línea cómoda para lectura */
+    color: #333;            /* Color de texto principal (gris oscuro) */
+    background: #f5f5f5;    /* Fondo gris claro para toda la página */
+}
+
+/* ========================================
+   BARRA DE NAVEGACIÓN FIJA
+   ======================================== */
+
+/* 3.6 - Posicionamiento Fixed
+   La navbar permanece fija en la parte superior al hacer scroll */
+.navbar {
+    position: fixed;        /* Fija en la ventana del navegador */
+    top: 0;                 /* Pegada al borde superior */
+    left: 0;                /* Pegada al borde izquierdo */
+    right: 0;               /* Pegada al borde derecho (ancho 100%) */
+    background: white;      /* Fondo blanco sólido */
+    padding: 15px 0;        /* 3.5.2 - Padding vertical para altura */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* 3.5.6 - Sombra sutil */
+    z-index: 1000;          /* Aparece sobre otros elementos */
+}
+
+/* Container interno de la navbar
+   Controla el ancho máximo y centrado */
+.nav-container {
+    max-width: 1200px;      /* 3.5.1 - Ancho máximo del contenido */
+    margin: 0 auto;         /* 3.5.4 - Centrado horizontal con margin auto */
+    padding: 0 20px;        /* 3.5.2 - Espacios laterales de seguridad */
+    display: flex;          /* 3.5.5 - Contenedor flexible */
+    justify-content: space-between;  /* Separa logo, links y carrito */
+    align-items: center;    /* Alineación vertical centrada */
+}
+
+/* Logo de la marca */
+.logo {
+    font-size: 24px;        /* 3.5.1 - Tamaño prominente */
+    font-weight: bold;      /* Negrita para destacar */
+    color: #007bff;         /* Color azul de marca */
+}
+
+/* ========================================
+   ELEMENTOS DE NAVEGACIÓN
+   ======================================== */
+
+/* 3.5.5 - Display Flex para alinear enlaces horizontalmente */
+.nav-links {
+    display: flex;          /* Enlaces en fila horizontal */
+    gap: 30px;              /* Espacio automático entre enlaces */
+}
+
+/* 3.5.5 - Display inline-block
+   Permite padding y mantiene comportamiento inline */
+.nav-link {
+    display: inline-block;  /* Acepta padding pero fluye horizontalmente */
+    padding: 10px 15px;     /* 3.5.2 - Área de clic más grande */
+    color: #333;            /* Color del texto */
+    text-decoration: none;  /* Sin subrayado */
+    border-radius: 5px;     /* 3.5.3 - Esquinas redondeadas */
+    transition: all 0.3s ease;  /* Transición suave en hover */
+}
+
+/* Estado hover del enlace */
+.nav-link:hover {
+    background: #007bff;    /* Fondo azul al pasar el mouse */
+    color: white;           /* Texto blanco en hover */
+}
+
+/* ========================================
+   ICONO DE CARRITO CON BADGE
+   ======================================== */
+
+/* 3.6 - Position Relative
+   Establece contexto para el badge absolute */
+.cart-icon {
+    position: relative;     /* Contexto de posicionamiento para hijos */
+    display: inline-block;  /* Se comporta como inline pero acepta dimensiones */
+    font-size: 24px;        /* Tamaño del icono */
+    cursor: pointer;        /* Indica que es clickeable */
+}
+
+/* 3.6 - Position Absolute
+   Badge flotante sobre el icono del carrito */
+.cart-badge {
+    position: absolute;     /* Se posiciona respecto al .cart-icon */
+    top: -8px;              /* 8px arriba del padre (valor negativo sale fuera) */
+    right: -8px;            /* 8px a la derecha del padre */
+    background: #ff4757;    /* Fondo rojo para llamar atención */
+    color: white;           /* Texto blanco */
+    border-radius: 50%;     /* 3.5.3 - Círculo perfecto */
+    width: 20px;            /* 3.5.1 - Ancho fijo */
+    height: 20px;           /* 3.5.1 - Alto fijo (círculo) */
+    display: flex;          /* 3.5.5 - Para centrar contenido */
+    align-items: center;    /* Centro vertical */
+    justify-content: center;/* Centro horizontal */
+    font-size: 12px;        /* Texto pequeño */
+    font-weight: bold;      /* Negrita para legibilidad */
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+/* 3.5.1 - Dimensiones, 3.5.2 - Padding, 3.5.6 - Box-shadow */
+.hero {
+    margin-top: 70px;       /* 3.5.4 - Compensa altura de navbar fija */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;           /* Texto blanco sobre gradiente */
+    padding: 80px 20px;     /* 3.5.2 - Padding generoso arriba/abajo */
+    text-align: center;     /* Todo el contenido centrado */
+    box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.1);  /* 3.5.6 - Sombra interior */
+}
+
+/* Título principal del hero */
+.hero h1 {
+    font-size: 48px;        /* 3.5.1 - Tamaño grande e impactante */
+    margin-bottom: 20px;    /* 3.5.4 - Separación del párrafo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  /* Sombra de texto */
+}
+
+/* Párrafo descriptivo del hero */
+.hero p {
+    font-size: 20px;        /* Texto legible */
+    margin-bottom: 30px;    /* 3.5.4 - Separación del botón */
+    max-width: 600px;       /* 3.5.1 - Ancho óptimo de lectura */
+    margin-left: auto;      /* 3.5.4 - Centrado horizontal */
+    margin-right: auto;     /* 3.5.4 - Centrado horizontal */
+}
+
+/* ========================================
+   BOTÓN DEL HERO
+   ======================================== */
+
+/* 3.5.2 - Padding, 3.5.3 - Border-radius */
+.hero-button {
+    display: inline-block;  /* Permite padding y permanece centrado */
+    padding: 15px 40px;     /* 3.5.2 - Área de clic generosa */
+    background: white;      /* Contraste con fondo gradiente */
+    color: #667eea;         /* Color del gradiente del hero */
+    border: none;           /* Sin borde visible */
+    border-radius: 30px;    /* 3.5.3 - Botón tipo píldora */
+    font-size: 18px;        /* Texto legible */
+    font-weight: bold;      /* Negrita para destacar */
+    cursor: pointer;        /* Indica que es clickeable */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* 3.5.6 - Sombra profunda */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+}
+
+/* Hover del botón hero */
+.hero-button:hover {
+    transform: translateY(-3px);  /* 3.6 - Se eleva 3px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  /* Sombra más intensa */
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL
+   ======================================== */
+
+/* 3.5.1 - Dimensiones, 3.5.4 - Márgenes */
+.container {
+    max-width: 1200px;      /* Ancho máximo del contenido */
+    margin: 60px auto;      /* 3.5.4 - 60px arriba/abajo, centrado horizontal */
+    padding: 0 20px;        /* 3.5.2 - Espacios laterales de seguridad */
+}
+
+/* ========================================
+   SECCIÓN DE CARACTERÍSTICAS
+   ======================================== */
+
+/* 3.5.5 - Display Flex para layout horizontal flexible */
+.features {
+    display: flex;          /* Contenedor flexible */
+    justify-content: space-around;  /* Distribución con espacio alrededor */
+    gap: 30px;              /* Espacio entre tarjetas */
+    margin-bottom: 60px;    /* 3.5.4 - Separación de siguiente sección */
+    flex-wrap: wrap;        /* Permite salto de línea en pantallas pequeñas */
+}
+
+/* ========================================
+   TARJETAS DE CARACTERÍSTICAS
+   ======================================== */
+
+/* 3.5 - Todos los elementos de la caja aplicados */
+.feature-card {
+    flex: 1;                /* Crece y se encoge proporcionalmente */
+    min-width: 250px;       /* 3.5.1 - Ancho mínimo antes de wrap */
+    background: white;      /* Fondo blanco sobre gris del body */
+    padding: 30px 20px;     /* 3.5.2 - 30px vertical, 20px horizontal */
+    border: 2px solid #e0e0e0;  /* 3.5.3 - Borde gris claro */
+    border-radius: 12px;    /* 3.5.3 - Esquinas redondeadas */
+    text-align: center;     /* Contenido centrado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);  /* 3.5.6 - Sombra sutil */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+}
+
+/* Hover de las tarjetas de características */
+.feature-card:hover {
+    transform: translateY(-10px);  /* 3.6 - Se eleva 10px */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* 3.5.6 - Sombra más profunda */
+    border-color: #007bff;  /* 3.5.3 - Borde cambia a azul */
+}
+
+/* Icono de la característica */
+.feature-icon {
+    font-size: 48px;        /* 3.5.1 - Icono grande y visible */
+    margin-bottom: 15px;    /* 3.5.4 - Separación del título */
+    color: #007bff;         /* Color de marca */
+}
+
+/* Título de la característica */
+.feature-title {
+    font-size: 22px;        /* 3.5.1 - Título prominente */
+    margin-bottom: 10px;    /* 3.5.4 - Separación de la descripción */
+    color: #333;            /* Color oscuro para contraste */
+}
+
+/* Descripción de la característica */
+.feature-description {
+    color: #666;            /* Gris medio (menos prominente que título) */
+    line-height: 1.6;       /* Altura de línea cómoda */
+}
+
+/* ========================================
+   TÍTULO DE SECCIÓN CON DECORACIÓN
+   ======================================== */
+
+/* 3.6 - Position relative para pseudo-elemento */
+.section-title {
+    text-align: center;     /* Centrado */
+    font-size: 36px;        /* 3.5.1 - Tamaño grande */
+    margin-bottom: 50px;    /* 3.5.4 - Separación del contenido */
+    color: #333;            /* Color oscuro */
+    position: relative;     /* Contexto para ::after */
+}
+
+/* Pseudo-elemento decorativo - línea debajo del título */
+.section-title::after {
+    content: "";            /* Requerido para que aparezca */
+    display: block;         /* Permite margin: auto */
+    width: 80px;            /* 3.5.1 - Ancho de la línea */
+    height: 4px;            /* 3.5.1 - Grosor de la línea */
+    background: #007bff;    /* Color azul de marca */
+    margin: 15px auto 0;    /* 3.5.4 - Centrado horizontal */
+    border-radius: 2px;     /* 3.5.3 - Esquinas sutilmente redondeadas */
+}
+
+/* ========================================
+   GRID DE PRODUCTOS
+   ======================================== */
+
+/* 3.5.5 - Display Grid con auto-fit y minmax */
+.products-grid {
+    display: grid;          /* Activa CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* repeat: Repite el patrón de columnas */
+    /* auto-fit: Número flexible de columnas según espacio */
+    /* minmax(280px, 1fr): Min 280px, Max 1 fracción del espacio */
+    gap: 30px;              /* Espacio entre productos */
+    margin-bottom: 60px;    /* 3.5.4 - Separación de siguiente sección */
+}
+
+/* ========================================
+   TARJETA DE PRODUCTO
+   ======================================== */
+
+/* Ejemplo completo del modelo de caja */
+.product-card {
+    position: relative;     /* 3.6 - Contexto para badge absolute */
+    background: white;      /* Fondo blanco */
+    border: 1px solid #e0e0e0;  /* 3.5.3 - Borde gris claro */
+    border-radius: 12px;    /* 3.5.3 - Esquinas redondeadas */
+    padding: 0;             /* 3.5.2 - Sin padding (imagen llega al borde) */
+    overflow: hidden;       /* Respeta border-radius en la imagen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);  /* 3.5.6 - Sombra sutil */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+}
+
+/* Hover de tarjeta de producto */
+.product-card:hover {
+    transform: translateY(-8px);  /* 3.6 - Se eleva 8px */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* 3.5.6 - Sombra más profunda */
+    border-color: #007bff;  /* 3.5.3 - Borde azul */
+}
+
+/* ========================================
+   BADGE DE PRODUCTO
+   ======================================== */
+
+/* 3.6 - Position absolute respecto a la tarjeta */
+.product-badge {
+    position: absolute;     /* Flota sobre la imagen */
+    top: 15px;              /* 15px desde arriba */
+    right: 15px;            /* 15px desde la derecha */
+    background: #ff4757;    /* Rojo para descuentos */
+    color: white;           /* Texto blanco */
+    padding: 5px 12px;      /* 3.5.2 - Espacio interno del badge */
+    border-radius: 20px;    /* 3.5.3 - Forma de píldora */
+    font-size: 12px;        /* Texto pequeño */
+    font-weight: bold;      /* Negrita */
+    z-index: 10;            /* Sobre la imagen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* 3.5.6 - Sombra sutil */
+}
+
+/* Badge de "nuevo" con color verde */
+.product-badge.nuevo {
+    background: #2ecc71;    /* Verde para productos nuevos */
+}
+
+/* Imagen del producto */
+.product-image {
+    width: 100%;            /* 3.5.1 - Ocupa todo el ancho */
+    height: 220px;          /* 3.5.1 - Altura fija para consistencia */
+    object-fit: cover;      /* Llena el espacio sin deformar */
+    display: block;         /* Elimina espacio extra debajo */
+}
+
+/* ========================================
+   CONTENIDO DEL PRODUCTO
+   ======================================== */
+
+/* 3.5.2 - Padding para espacio interno */
+.product-content {
+    padding: 20px;          /* Espacio alrededor del contenido */
+}
+
+/* Título del producto */
+.product-title {
+    font-size: 20px;        /* 3.5.1 - Tamaño del título */
+    margin-bottom: 10px;    /* 3.5.4 - Separación de la descripción */
+    color: #333;            /* Color oscuro */
+}
+
+/* Descripción del producto */
+.product-description {
+    color: #666;            /* Gris medio */
+    margin-bottom: 15px;    /* 3.5.4 - Separación del precio */
+    line-height: 1.5;       /* Altura de línea */
+}
+
+/* Precio del producto */
+.product-price {
+    font-size: 28px;        /* 3.5.1 - Tamaño grande y prominente */
+    font-weight: bold;      /* Negrita */
+    color: #007bff;         /* Color de marca */
+    margin-bottom: 15px;    /* 3.5.4 - Separación del botón */
+}
+
+/* Botón del producto */
+.product-button {
+    display: block;         /* 3.5.5 - Permite width: 100% */
+    width: 100%;            /* 3.5.1 - Ocupa todo el ancho */
+    padding: 12px;          /* 3.5.2 - Área de clic cómoda */
+    background: #007bff;    /* Fondo azul */
+    color: white;           /* Texto blanco */
+    border: none;           /* Sin borde */
+    border-radius: 6px;     /* 3.5.3 - Esquinas redondeadas */
+    font-size: 16px;        /* Texto legible */
+    font-weight: bold;      /* Negrita */
+    cursor: pointer;        /* Indica que es clickeable */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+}
+
+/* Hover del botón de producto */
+.product-button:hover {
+    background: #0056b3;    /* Azul más oscuro */
+    transform: scale(1.02); /* 3.6 - Crece 2% */
+}
+
+/* ========================================
+   SECCIÓN ABOUT CON IMAGEN FLOTANTE
+   ======================================== */
+
+/* 3.6 - Float para imagen con texto fluyendo alrededor */
+.about-section {
+    background: white;      /* Fondo blanco */
+    padding: 60px 40px;     /* 3.5.2 - Padding generoso para lectura */
+    border-radius: 12px;    /* 3.5.3 - Esquinas redondeadas */
+    margin-bottom: 60px;    /* 3.5.4 - Separación de siguiente sección */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  /* 3.5.6 - Sombra difusa */
+}
+
+/* Imagen flotante */
+.about-image {
+    float: left;            /* 3.6 - Flota a la izquierda, texto alrededor */
+    width: 350px;           /* 3.5.1 - Ancho fijo */
+    height: 250px;          /* 3.5.1 - Alto fijo */
+    margin: 0 30px 20px 0;  /* 3.5.4 - Margen derecho e inferior */
+    border-radius: 8px;     /* 3.5.3 - Esquinas sutilmente redondeadas */
+    object-fit: cover;      /* Llena el espacio sin deformar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 3.5.6 - Sombra moderada */
+}
+
+/* Clearfix para contener el float */
+.about-section::after {
+    content: "";            /* Requerido para pseudo-elemento */
+    display: table;         /* Crea nuevo contexto de formato */
+    clear: both;            /* 3.6 - Limpia floats (clearfix) */
+}
+
+/* Título de about */
+.about-title {
+    font-size: 32px;        /* 3.5.1 - Tamaño grande */
+    margin-bottom: 20px;    /* 3.5.4 - Separación del texto */
+    color: #333;            /* Color oscuro */
+}
+
+/* Texto de about */
+.about-text {
+    font-size: 16px;        /* Tamaño estándar */
+    line-height: 1.8;       /* Altura de línea generosa para lectura */
+    color: #555;            /* Gris medio */
+    text-align: justify;    /* Texto justificado */
+}
+
+/* ========================================
+   SECCIÓN DE TESTIMONIOS
+   ======================================== */
+
+/* 3.5.3 - Border, 3.5.6 - Box-shadow */
+.testimonials {
+    display: flex;          /* 3.5.5 - Contenedor flexible */
+    gap: 30px;              /* Espacio entre testimonios */
+    margin-bottom: 60px;    /* 3.5.4 - Separación de siguiente sección */
+    flex-wrap: wrap;        /* Permite salto de línea */
+}
+
+/* Tarjeta de testimonio */
+.testimonial {
+    flex: 1;                /* Crece proporcionalmente */
+    min-width: 300px;       /* 3.5.1 - Ancho mínimo */
+    background: white;      /* Fondo blanco */
+    padding: 25px;          /* 3.5.2 - Espacio interno */
+    border-left: 4px solid #007bff;  /* 3.5.3 - Borde izquierdo decorativo */
+    border-radius: 8px;     /* 3.5.3 - Esquinas redondeadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);  /* 3.5.6 - Sombra sutil */
+}
+
+/* Texto del testimonio */
+.testimonial-text {
+    font-style: italic;     /* Cursiva para citas */
+    color: #555;            /* Gris medio */
+    margin-bottom: 15px;    /* 3.5.4 - Separación del autor */
+    line-height: 1.6;       /* Altura de línea cómoda */
+}
+
+/* Autor del testimonio */
+.testimonial-author {
+    font-weight: bold;      /* Negrita */
+    color: #333;            /* Color oscuro */
+}
+
+/* ========================================
+   NEWSLETTER
+   ======================================== */
+
+/* Diferentes tipos de border */
+.newsletter {
+    background: white;      /* Fondo blanco */
+    padding: 40px;          /* 3.5.2 - Padding generoso */
+    border: 3px double #007bff;  /* 3.5.3 - Borde doble decorativo */
+    border-radius: 12px;    /* 3.5.3 - Esquinas redondeadas */
+    text-align: center;     /* Contenido centrado */
+    margin-bottom: 60px;    /* 3.5.4 - Separación de siguiente sección */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  /* 3.5.6 - Sombra sutil */
+}
+
+/* Título de newsletter */
+.newsletter h3 {
+    font-size: 28px;        /* 3.5.1 - Tamaño grande */
+    margin-bottom: 15px;    /* 3.5.4 - Separación del formulario */
+    color: #333;            /* Color oscuro */
+}
+
+/* Formulario de newsletter */
+.newsletter-form {
+    display: flex;          /* 3.5.5 - Contenedor flexible */
+    justify-content: center;/* Centrado horizontal */
+    gap: 10px;              /* Espacio entre input y botón */
+    margin-top: 20px;       /* 3.5.4 - Separación del título */
+    flex-wrap: wrap;        /* Permite salto de línea en móviles */
+}
+
+/* Input de newsletter */
+.newsletter-input {
+    padding: 12px 20px;     /* 3.5.2 - Espacio interno cómodo */
+    border: 2px solid #ddd; /* 3.5.3 - Borde gris claro */
+    border-radius: 6px;     /* 3.5.3 - Esquinas redondeadas */
+    font-size: 16px;        /* Tamaño legible */
+    min-width: 300px;       /* 3.5.1 - Ancho mínimo */
+    transition: border-color 0.3s ease;  /* Transición en foco */
+}
+
+/* Focus del input */
+.newsletter-input:focus {
+    outline: none;          /* Quita outline por defecto */
+    border-color: #007bff;  /* 3.5.3 - Borde azul en foco */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);  /* 3.5.6 - Glow sutil */
+}
+
+/* Botón de newsletter */
+.newsletter-button {
+    padding: 12px 30px;     /* 3.5.2 - Área de clic */
+    background: #007bff;    /* Fondo azul */
+    color: white;           /* Texto blanco */
+    border: none;           /* Sin borde */
+    border-radius: 6px;     /* 3.5.3 - Esquinas redondeadas */
+    font-size: 16px;        /* Texto legible */
+    font-weight: bold;      /* Negrita */
+    cursor: pointer;        /* Indica que es clickeable */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+}
+
+/* Hover del botón de newsletter */
+.newsletter-button:hover {
+    background: #0056b3;    /* Azul más oscuro */
+    transform: translateY(-2px);  /* 3.6 - Se eleva ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* 3.5.6 - Sombra */
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background: #2c3e50;    /* Fondo gris oscuro */
+    color: white;           /* Texto blanco */
+    padding: 40px 20px 20px;/* 3.5.2 - Padding variable */
+    text-align: center;     /* Contenido centrado */
+}
+
+/* Contenido del footer */
+.footer-content {
+    max-width: 1200px;      /* 3.5.1 - Ancho máximo */
+    margin: 0 auto 20px;    /* 3.5.4 - Centrado y margen inferior */
+    display: flex;          /* 3.5.5 - Contenedor flexible */
+    justify-content: space-around;  /* Distribución espaciada */
+    gap: 30px;              /* Espacio entre secciones */
+    flex-wrap: wrap;        /* Permite salto de línea */
+}
+
+/* Sección del footer */
+.footer-section {
+    flex: 1;                /* Crece proporcionalmente */
+    min-width: 200px;       /* 3.5.1 - Ancho mínimo */
+}
+
+/* Título de sección del footer */
+.footer-section h4 {
+    margin-bottom: 15px;    /* 3.5.4 - Separación de enlaces */
+    font-size: 18px;        /* Tamaño del título */
+}
+
+/* Lista de enlaces del footer */
+.footer-links {
+    list-style: none;       /* Sin viñetas */
+}
+
+/* Items de la lista */
+.footer-links li {
+    margin-bottom: 8px;     /* 3.5.4 - Separación entre enlaces */
+}
+
+/* Enlaces del footer */
+.footer-links a {
+    color: #bdc3c7;         /* Gris claro */
+    text-decoration: none;  /* Sin subrayado */
+    transition: color 0.3s ease;  /* Transición suave */
+}
+
+/* Hover de enlaces del footer */
+.footer-links a:hover {
+    color: white;           /* Blanco en hover */
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    border-top: 1px solid #34495e;  /* 3.5.3 - Borde superior divisor */
+    padding-top: 20px;      /* 3.5.2 - Padding superior */
+    color: #bdc3c7;         /* Gris claro */
+}
+
+/* ========================================
+   BOTÓN FLOTANTE SCROLL-TO-TOP
+   ======================================== */
+
+/* 3.6 - Position fixed para botón flotante */
+.scroll-top {
+    position: fixed;        /* Fijo en la ventana */
+    bottom: 30px;           /* 30px desde abajo */
+    right: 30px;            /* 30px desde la derecha */
+    width: 50px;            /* 3.5.1 - Ancho fijo */
+    height: 50px;           /* 3.5.1 - Alto fijo (círculo) */
+    background: #007bff;    /* Fondo azul */
+    color: white;           /* Icono blanco */
+    border: none;           /* Sin borde */
+    border-radius: 50%;     /* 3.5.3 - Círculo perfecto */
+    font-size: 20px;        /* Tamaño del icono */
+    cursor: pointer;        /* Indica que es clickeable */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* 3.5.6 - Sombra para elevación */
+    transition: all 0.3s ease;  /* Transiciones suaves */
+    z-index: 999;           /* Aparece sobre contenido pero bajo modales */
+}
+
+/* Hover del botón scroll-to-top */
+.scroll-top:hover {
+    background: #0056b3;    /* Azul más oscuro */
+    transform: translateY(-5px);  /* 3.6 - Se eleva 5px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* 3.5.6 - Sombra más intensa */
+}
+
+/* ========================================
+   MODAL (VENTANA EMERGENTE)
+   ======================================== */
+
+/* 3.6 - Position fixed, 3.5.6 - Box-shadow */
+/* Overlay del modal - Fondo oscuro que cubre toda la pantalla */
+.modal-overlay {
+    position: fixed;        /* Cubre toda la ventana del navegador */
+    top: 0;                 /* Desde el borde superior */
+    left: 0;                /* Desde el borde izquierdo */
+    right: 0;               /* Hasta el borde derecho */
+    bottom: 0;              /* Hasta el borde inferior */
+    background: rgba(0, 0, 0, 0.6);  /* Negro con 60% de opacidad */
+    display: none;          /* Oculto por defecto */
+    align-items: center;    /* Centro vertical del modal */
+    justify-content: center;/* Centro horizontal del modal */
+    z-index: 9999;          /* Máxima prioridad visual */
+}
+
+/* Clase que activa el modal */
+.modal-overlay.active {
+    display: flex;          /* 3.5.5 - Cambia a flex para mostrar */
+}
+
+/* Contenedor del modal */
+.modal {
+    position: relative;     /* 3.6 - Contexto para botón close */
+    background: white;      /* Fondo blanco del modal */
+    padding: 40px;          /* 3.5.2 - Padding generoso */
+    border-radius: 12px;    /* 3.5.3 - Esquinas redondeadas */
+    max-width: 500px;       /* 3.5.1 - Ancho máximo */
+    width: 90%;             /* 3.5.1 - 90% en pantallas pequeñas */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);  /* 3.5.6 - Sombra dramática */
+    animation: modalFadeIn 0.3s ease;  /* Animación de entrada */
+}
+
+/* Animación de entrada del modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;         /* Comienza invisible */
+        transform: translateY(-50px);  /* 50px arriba */
+    }
+    to {
+        opacity: 1;         /* Termina visible */
+        transform: translateY(0);  /* En su posición normal */
+    }
+}
+
+/* Botón de cerrar modal */
+.modal-close {
+    position: absolute;     /* 3.6 - Posicionado respecto al .modal */
+    top: 15px;              /* 15px desde arriba */
+    right: 15px;            /* 15px desde la derecha */
+    background: none;       /* Sin fondo */
+    border: none;           /* Sin borde */
+    font-size: 28px;        /* Tamaño grande del icono X */
+    cursor: pointer;        /* Indica que es clickeable */
+    color: #999;            /* Gris medio */
+    transition: color 0.3s ease;  /* Transición suave */
+}
+
+/* Hover del botón cerrar */
+.modal-close:hover {
+    color: #333;            /* Gris oscuro en hover */
+}
+
+/* Título del modal */
+.modal h2 {
+    margin-bottom: 20px;    /* 3.5.4 - Separación del contenido */
+    color: #333;            /* Color oscuro */
+}
+
+/* Párrafo del modal */
+.modal p {
+    color: #666;            /* Gris medio */
+    line-height: 1.6;       /* Altura de línea cómoda */
+    margin-bottom: 20px;    /* 3.5.4 - Separación entre párrafos */
+}
+
+/* ========================================
+   RESPONSIVE - MEDIA QUERIES
+   ======================================== */
+
+/* Tablets y móviles (768px y menos) */
+@media (max-width: 768px) {
+    
+    /* Hero más compacto en móviles */
+    .hero h1 {
+        font-size: 32px;    /* 3.5.1 - Reduce tamaño del título */
+    }
+
+    /* Imagen about - De flotante a completa */
+    /* 3.6 - Elimina float en móviles */
+    .about-image {
+        float: none;        /* Ya no flota, vuelve al flujo normal */
+        width: 100%;        /* 3.5.1 - Ocupa todo el ancho */
+        margin: 0 0 20px 0; /* 3.5.4 - Solo margen inferior */
+    }
+
+    /* Oculta enlaces de navegación en móviles */
+    /* 3.5.5 - Display none */
+    .nav-links {
+        display: none;      /* Oculta los enlaces (aquí iría menú hamburguesa) */
+    }
+}
