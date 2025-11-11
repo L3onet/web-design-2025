@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="css/calculadora.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <div class="display">
+                <input type="text" id="pantalla" readonly value="0">
+            </div>
+            <div class="botones">
+                <button class="btn btn-funcion" data-action="clear">C</button>
+                <button class="btn btn-funcion" data-action="delete">⌫</button>
+                <button class="btn btn-operador" data-action="porcentaje">%</button>
+                <button class="btn btn-operador" data-action="dividir">÷</button>
+                
+                <button class="btn btn-numero" data-numero="7">7</button>
+                <button class="btn btn-numero" data-numero="8">8</button>
+                <button class="btn btn-numero" data-numero="9">9</button>
+                <button class="btn btn-operador" data-action="multiplicar">×</button>
+                
+                <button class="btn btn-numero" data-numero="4">4</button>
+                <button class="btn btn-numero" data-numero="5">5</button>
+                <button class="btn btn-numero" data-numero="6">6</button>
+                <button class="btn btn-operador" data-action="restar">−</button>
+                
+                <button class="btn btn-numero" data-numero="1">①</button>
+                <button class="btn btn-numero" data-numero="2">𝟚</button>
+                <button class="btn btn-numero" data-numero="3">3</button>
+                <button class="btn btn-operador" data-action="sumar">+</button>
+                
+                <button class="btn btn-funcion" data-action="cambiar-signo">+/−</button>
+                <button class="btn btn-numero" data-numero="0">0</button>
+                <button class="btn btn-numero" data-action="decimal">.</button>
+                <button class="btn btn-igual" data-action="igual">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculadora.js"></script>
+</body>
+</html>

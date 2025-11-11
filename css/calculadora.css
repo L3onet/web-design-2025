@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculadora {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#pantalla {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 2.5em;
+    text-align: right;
+    color: #333;
+    font-weight: 300;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: default;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-numero {
+    background: #fff;
+    color: #333;
+}
+
+.btn-numero:hover {
+    background: #f8f8f8;
+}
+
+.btn-operador {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-operador:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #63408b 100%);
+}
+
+.btn-funcion {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-funcion:hover {
+    background: #ee5a5a;
+}
+
+.btn-igual {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    font-size: 2em;
+}
+
+.btn-igual:hover {
+    background: linear-gradient(135deg, #0f8577 0%, #2dd96b 100%);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .calculadora {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    #pantalla {
+        height: 70px;
+        font-size: 2em;
+        padding: 15px;
+    }
+    
+    .btn {
+        height: 60px;
+        font-size: 1.3em;
+    }
+    
+    .btn-igual {
+        font-size: 1.8em;
+    }
+    
+    .botones {
+        gap: 10px;
+    }
+}
+
